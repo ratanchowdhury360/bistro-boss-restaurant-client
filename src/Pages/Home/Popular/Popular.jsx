@@ -4,10 +4,10 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 const Popular = () => {
     return (
         <section>
-            <SectionTitle>
-                subHeading="Popular Items"
+            <SectionTitle
+                subHeading="Check it out"
                 heading="From Our Menu"
-            </SectionTitle>
+            />
 
 
         </section>
