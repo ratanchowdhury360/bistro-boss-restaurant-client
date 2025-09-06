@@ -3,6 +3,7 @@ import Category from "../Category/Category";
 import Details from "../Details/Details";
 import Featured from "../Featured/Featured";
 import Popular from "../Popular/Popular";
+import Testimonials from "../Testimonials/Testimonials";
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Details></Details>
             <Popular></Popular>
             <Featured></Featured>
+            <Testimonials></Testimonials>
         </div>
     );
 };
