@@ -29,6 +29,10 @@ const Popular = () => {
                     item={item}>
                 </MenuItem>)}
             </div>
+           <div className="flex justify-center">
+             <button className="btn btn-outline text-center text-white border-0 border-b-4 mt-4">View full manu</button>
+           </div>
+                
 
         </section>
     );
