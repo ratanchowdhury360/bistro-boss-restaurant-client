@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 
@@ -32,7 +33,7 @@ const SignUp = () => {
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold">Sign Up!</h1>
                         <p className="py-6">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                             quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -84,6 +85,7 @@ const SignUp = () => {
 
                             </div>
                         </form>
+                        <p><small>Already have an account?<Link to="/login">go to login page</Link></small></p>
                     </div>
                 </div>
             </div>
