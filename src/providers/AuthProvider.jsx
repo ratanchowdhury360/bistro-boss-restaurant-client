@@ -1,12 +1,18 @@
 /* eslint-disable react-refresh/only-export-components */
 
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
+
+const updateUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+        displayName: name, photoURL: photo
+    });
+}
 
 
 const AuthProvider = ({children}) => {
@@ -49,7 +55,8 @@ const AuthProvider = ({children}) => {
         loading,
         createUser ,
         signIn
-        ,logOut
+        ,logOut,
+        updateUserProfile
 
     }
 
