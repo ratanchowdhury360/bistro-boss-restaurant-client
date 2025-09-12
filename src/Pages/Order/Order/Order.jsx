@@ -47,7 +47,9 @@ const Order = () => {
                 <TabPanel>
                     <OrderTab items={pizza}> </OrderTab>
                 </TabPanel>
-                <OrderTab items={soup}> </OrderTab>
+                <TabPanel>
+                    <OrderTab items={soup}> </OrderTab>
+                </TabPanel>
                 <TabPanel>
                     <OrderTab items={desserts}> </OrderTab>
                 </TabPanel>
