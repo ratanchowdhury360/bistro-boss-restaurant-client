@@ -14,6 +14,7 @@ import Secret from "../Pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../Pages/Dashboard/Cart";
 import AllUsers from "../Pages/Dashboard/AllUser/AllUser";
+import AddItems from "../Pages/Dashboard/AddItems/AddItems";
 
 
 
@@ -55,7 +56,11 @@ import AllUsers from "../Pages/Dashboard/AllUser/AllUser";
       path : 'cart',
       element: <Cart></Cart>
     },
-   // admin routes
+  // admin routes
+        {
+          path: 'addItems',
+          element: <AddItems></AddItems>
+        },
         {
           path: 'users',
           element: <AllUsers></AllUsers>
