@@ -16,22 +16,26 @@ import Cart from "../Pages/Dashboard/Cart";
 import AllUsers from "../Pages/Dashboard/AllUser/AllUser";
 
 
+import AdminRoute from "./AdminRoute";
+import AddItems from "../Pages/Dashboard/AddItems/AddItems";
 
 
- export const router = createBrowserRouter([
+
+
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main> </Main>,
-    children:[{
-        path: '/',
-        element: <Home></Home>
+    children: [{
+      path: '/',
+      element: <Home></Home>
     },
     {
       path: 'menu',
       element: <Menu></Menu>
     },
     {
-      path : 'order/:category',
+      path: 'order/:category',
       element: <Order></Order>
     },
     {
@@ -43,26 +47,30 @@ import AllUsers from "../Pages/Dashboard/AllUser/AllUser";
       element: <SignUp></SignUp>
     },
     {
-      path : '/secret',
+      path: '/secret',
       element: <PrivateRoute><Secret></Secret></PrivateRoute>
 
     }
-  ]
+    ]
   },
   {
-    path : "/dashboard",
-    element : <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-    children : [{
-      path : 'cart',
+    path: "/dashboard",
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [{
+      // normal user routes
+      path: 'cart',
       element: <Cart></Cart>
     },
-  // admin routes
-      
-        {
-          path: 'users',
-          element: <AllUsers></AllUsers>
-        }
-  ]
+    // admin only routes
+    {
+      path: 'addItems',
+      element: <AdminRoute><AddItems></AddItems></AdminRoute>
+    },
+    {
+      path: 'users',
+     element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+    }
+    ]
   }
 ]);
 
