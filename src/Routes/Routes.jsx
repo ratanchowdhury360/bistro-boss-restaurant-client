@@ -49,7 +49,7 @@ import Cart from "../Pages/Dashboard/Cart";
   },
   {
     path : "/dashboard",
-    element : <Dashboard></Dashboard>,
+    element : <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children : [{
       path : 'cart',
       element: <Cart></Cart>
