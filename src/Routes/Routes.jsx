@@ -12,7 +12,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../Pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
-import Cart from "../Pages/Dashboard/Cart";
+
 import AllUsers from "../Pages/Dashboard/AllUser/AllUser";
 
 
@@ -20,6 +20,7 @@ import AdminRoute from "./AdminRoute";
 import AddItems from "../Pages/Dashboard/AddItems/AddItems";
 import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
 import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateItem";
+import Cart from "../Pages/Dashboard/Cart/Cart";
 
 
 
